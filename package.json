@@ -1,11 +1,11 @@
 {
-  "name": "FrontEndBase",
+  "name": "macis",
   "version": "1.0.0",
-  "description": "Webpack + PUG + SASS + BABEL",
+  "description": "MACIS",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack -p --config webpack.prod.js"
   },
   "author": "JuanDiegoBS",
   "license": "MIT",
