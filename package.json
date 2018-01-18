@@ -1,7 +1,7 @@
 {
-  "name": "macis",
+  "name": "FrontEndBase",
   "version": "1.0.0",
-  "description": "MACIS",
+  "description": "Webpack + PUG + SASS + BABEL",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
@@ -21,7 +21,6 @@
     "css-mqpacker": "^6.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
-    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
     "image-webpack-loader": "^3.4.2",
     "node-sass": "^4.7.2",
@@ -29,7 +28,6 @@
     "postcss-custom-media": "^6.0.0",
     "postcss-loader": "^2.0.10",
     "pug": "^2.0.0-rc.4",
-    "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.3.0",
     "rucksack-css": "^1.0.2",
     "sass-loader": "^6.0.6",
