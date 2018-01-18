@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack -p --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "JuanDiegoBS",
   "license": "MIT",
@@ -14,8 +14,6 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.5",
-    "browser-sync-webpack-plugin": "^1.2.0",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.9",
     "css-mqpacker": "^6.0.1",
@@ -32,6 +30,7 @@
     "rucksack-css": "^1.0.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0"

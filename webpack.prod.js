@@ -2,6 +2,7 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 process.noDeprecation = true
 
@@ -80,10 +81,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Portada',
       hash: true,
-      template: path.resolve(__dirname, 'src/index.pug')
+      template: path.resolve(__dirname, 'src/templates/index.pug')
     }),
     new CleanWebpackPlugin(['dist'], {
       root: __dirname,
+    }),
+    new UglifyJsPlugin({
+      sourceMap: true
     })
   ]
 }

@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 process.noDeprecation = true
 
@@ -10,12 +9,14 @@ module.exports = {
     app: path.resolve(__dirname, 'src/app.js'),
   },
   output: {
-    filename: '[name].[hash].js'
+    filename: '[name].bundle.js'
   },
   devServer: {
-    port: 9000,
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
     open: true,
-    hot: true
+    hot: true,
+    stats: 'errors-only'
   },
   module: {
     rules: [
@@ -50,7 +51,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]?[hash]',
+              name: '[name].[ext]',
               outputPath: 'i/',
               publicPath: '../'
             }
@@ -77,12 +78,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Portada',
-      template: path.resolve(__dirname, 'src/index.pug')
-    }),
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 9001,
-      proxy: 'http://localhost:9000/'
+      template: path.resolve(__dirname, 'src/templates/index.pug')
     }),
     new webpack.HotModuleReplacementPlugin()
   ]

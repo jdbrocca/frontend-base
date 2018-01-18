@@ -1,0 +1,37 @@
+mixin section-home(object)
+	section.grid.grid--section
+		.grid__left
+			h2.title-section
+				a(href="")= object.title
+			article.article.article--big
+				a(href="")
+					figure
+						img.article__image(src=require("../i/" + object.articleBigImg), alt=object.articleBigTitle)
+						figcaption.article__caption
+							h3.article__title= object.articleBigTitle
+		.grid__right
+			if object.ads
+				.ads
+					.ads__content
+						img(src=require("../i/" + object.ads), alt="")
+			else
+				article.article.article--small
+					a(href="")
+						figure
+							img.article__image(src=require("../i/" + object.articleSmallImg), alt=object.articleSmallTitle)
+							figcaption.article__caption
+								h3.article__title= object.articleSmallTitle
+			article.article.article--small
+				a(href="")
+					figure
+						img.article__image(src=require("../i/" + object.articleSmallImg), alt=object.articleSmallTitle)
+						figcaption.article__caption
+							h3.article__title= object.articleSmallTitle
+		.grid__full
+			each art in [1, 2, 3]
+				article.article.article--small
+					a(href="")
+						figure
+							img.article__image(src=require("../i/" + object.articleSmallImg), alt=object.articleSmallTitle)
+							figcaption.article__caption
+								h3.article__title= object.articleSmallTitle
